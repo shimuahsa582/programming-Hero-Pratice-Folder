@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #bubble-section {
+        border: 3px solid green;
+        margin: 4px;
+    }
+
+    #ol-list {
+        border: 3px solid red;
+        margin: 4px;
+    }
+
+    .item {
+        border: 3px solid purple;
+        margin: 4px;
+    }
+</style>
+
+<body>
+    <!-- 1st even handler  -->
+    <button onclick="console.log('click me again and again')">Click Me </button>
+
+    <!-- 2nd even handlar  -->
+    <button onclick="changeBodyColor()">Yellow Body</button>
+
+
+    <!-- login button create -->
+    <section class="login-section">
+        <p id="user-details">No User</p>
+        <input type="text" name="name" id="name-input">
+        <button id="user-button">Login</button>
+
+    </section>
+
+
+    <!-- update button -->
+    <p id="user-pera">Updated User</p>
+    <input type="email" name="" id="email">
+    <button id="update-button">Update</button>
+
+
+
+    <!-- add and remove post, comment section -->
+    <section class="comment-section">
+        <h1>My aswame comment box. Write what in your mind!</h1>
+        <div id="comment-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, nulla.</p>
+        </div>
+        <textarea name="" id="comment-text-box" cols="30" rows="10"></textarea>
+        <br>
+        <button id="comment-button">Write Comment</button>
+    </section>
+
+
+    <!-- delete github button  -->
+    <section class="github-button">
+        <p id="github-pera">Github Button</p>
+        <input type="text" name="" id="github-input">
+        <button id="github-delete-btn" disabled>Delete</button>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <!-- user delete button -->
+    <p id="user-hidden">user</p>
+    <input type="text" name="" id="user-delete-input">
+    <button id="user-delete" disabled>User Delete</button>
+
+
+    <!-- bubble propagration -->
+    <section id="bubble-section">
+        <h1>learn bubble propagration</h1>
+        <ol id="ol-list">
+            <li class="item item-1">Lorem, ipsum.</li>
+            <li class="item item-2">Lorem,</li>
+            <li class="item item-3">ipsum.</li>
+            <li class="item item-4">Lorem, ipsum.</li>
+            <li class="item item-5">ipsum.</li>
+            <li class="item item-6">Lorem</li>
+
+        </ol>
+    </section>
+
+
+    <!-- bubble delagation-->
+    <section id="bubble-delegation">
+        <h1>Learn Bubble Event Delegation</h1>
+        <ol id="ol-list-item">
+            <li class="items items-1">Lorem, ipsum.</li>
+            <li class="items items-2">Lorem,</li>
+            <li class="items items-3">ipsum.</li>
+            <li class="items items-4">Lorem, ipsum.</li>
+            <li class="items items-5">ipsum.</li>
+            <li class="items items-6">Lorem</li>
+
+        </ol>
+        <button id="add-new-btn">Add New Item</button>
+    </section>
+
+
+
+
+    <script src="event.js"></script>
+</body>
+
+</html>
