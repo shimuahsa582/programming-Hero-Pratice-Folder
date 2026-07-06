@@ -38,12 +38,36 @@ outputUser();
 outputUser();
 outputUser();
 console.log("===============================");
+
 const userRahim = userFunction("rahim");
 userRahim("rahim");
 userRahim("rahim");
 userRahim("rahim")
 console.log("-----------------------------");
+
 const userKarim = userFunction("karim");
 userKarim();
 userKarim();
 userRahim();
+
+//  Explore about Closure
+function bankAccount() {
+    let balance = 500;
+
+    return {
+        deposit(amount) {
+            balance += amount;
+            console.log(balance);
+        },
+
+        withdraw(amount) {
+            balance -= amount;
+            console.log(balance);
+        }
+    };
+}
+
+const account = bankAccount();
+
+account.deposit(100);
+account.withdraw(50); 
