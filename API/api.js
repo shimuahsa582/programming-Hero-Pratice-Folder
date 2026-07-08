@@ -32,36 +32,34 @@ const userInformation = () => {
 }
 
 
-// Load and Display Post title List in the UI
-const loadDataPost = () => {
-    const url = "https://jsonplaceholder.typicode.com/users";
-    fetch(url)
-        .then(res => res.json())
+// get data in API and show all data UI 
+const loadPost = () => {
+    const postUrl = "https://jsonplaceholder.typicode.com/users"
+    fetch(postUrl)
+        .then(response =>
+            response.json()
+        )
         .then(json => {
             console.log(json)
-            displayPost(json)
+            display(json)
         })
 }
 
-const displayPost = (posts) => {
+const display = (titles) => {
+    const showPostUi = document.getElementById("postContainer")
+    showPostUi.innerHTML = "";
+    titles.forEach(title => {
+        const createDivContainer = document.createElement("div");
 
-    // 1st step: access get div container
-    const showData = document.getElementById("container");
-
-    posts.forEach(post => {
-        // console.log(post.email, post.username);
-
-        // create li element 
-        const li = document.createElement("li");
-        li.innerText = post.name;
-        // console.log(li);
-
-        // 3rd step:li append in container div
-        showData.appendChild(li);
-
+        createDivContainer.innerHTML = `
+        <div class="postCard">
+               <h2>${title.name}</h2>
+            <p>${title.username}</p>
+        </div>
+        `
+            ;
+        showPostUi.appendChild(createDivContainer);
     });
 }
-
-
-
+loadPost()
 
