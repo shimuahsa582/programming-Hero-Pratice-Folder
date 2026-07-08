@@ -1,0 +1,50 @@
+/* todo card design */
+.todo-card {
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px goldenrod;
+    border-radius: 10px;
+    border: 1px solild gray;
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    padding: 20px;
+}
+
+/* todo card peragraph */
+.todo-pera {
+    margin-right: 10px;
+}
+
+/* todo comment section */
+#todoComment {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    gap: 10px;
+    margin: 0 auto;
+
+}
+
+.comment-card {
+    border-radius: 10px;
+    box-shadow: 1px 1px rgb(241, 225, 222);
+    padding: 10px;
+    text-align: justify;
+    max-width: 100%;
+}
+
+/*  */
+#todoUser{
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        gap: 10px;
+        margin: 0 auto;
+}
+.user-card{
+    border-radius: 10px;
+        box-shadow: 1px 1px rgb(241, 225, 222);
+        padding: 10px;
+        text-align: justify;
+        max-width: 100%;
+}
